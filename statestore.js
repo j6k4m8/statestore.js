@@ -1,4 +1,5 @@
 // @j6k4m8
+// https://github.com/j6k4m8/statestore.js
 
 class StateMachine {
     constructor(prior) {
