@@ -1,3 +1,4 @@
+// @j6k4m8
 
 class StateMachine {
     constructor(prior) {
@@ -105,22 +106,23 @@ class LocalStorageStateMachine extends StateMachine {
 }
 
 
-if (window.location.search.length >= 1) {
-    _state = new LocalStorageStateMachine(
-        (new URLStateMachine()).saveState()
-    );
-} else {
-    _state = new LocalStorageStateMachine();
-}
+// This might be useful to you:
+// if (window.location.search.length >= 1) {
+//     _state = new LocalStorageStateMachine(
+//         (new URLStateMachine()).saveState()
+//     );
+// } else {
+//     _state = new LocalStorageStateMachine();
+// }
 
-getState = function(key) {
-    return _state.getState(key);
-}
+// getState = function(key) {
+//     return _state.getState(key);
+// }
 
-setState = function(key, val) {
-    return _state.setState(key, val);
-}
+// setState = function(key, val) {
+//     return _state.setState(key, val);
+// }
 
-saveURL = function() {
-    (new URLStateMachine(_state.saveState())).saveState();
-};
+// saveURL = function() {
+//     (new URLStateMachine(_state.saveState())).saveState();
+// };
